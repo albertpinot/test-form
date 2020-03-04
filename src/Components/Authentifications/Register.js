@@ -4,8 +4,7 @@ import React, { Component } from 'react';
 /* CSS */
 //import '../../css/Register.css';
 
-/* Exportation de la classe Register */
-export default class Register extends Component {
+class Register extends Component {
   // Rendu du composant Register
   render () {
       return (
@@ -46,7 +45,7 @@ export default class Register extends Component {
               />
               <br/>
               <input 
-                type="button"
+                type="submit"
                 name="valider"
                 value="S'inscrire"
                 className="m-t-l m-b-m"
@@ -60,3 +59,5 @@ export default class Register extends Component {
     }
 }
 
+/* Exportation de la classe Register */
+export default Register

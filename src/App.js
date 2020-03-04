@@ -1,37 +1,38 @@
 /* Import module */
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 /* CSS */
 import './css/App.css';
 
 /* Components */
-import ListeUser from './Components/ListeUser';
-import Login from './Components/Authentifications/Login';
-import Register from './Components/Authentifications/Register';
+import Rout from './Components/Router';
 
-/* Exportation de la classe App*/
-export default class App extends Component {
+class App extends Component {
+  state = {
+    isLogin: false
+  } 
   render () {
-      return  (
-        <div className="App">    
-          <div>
-            <ul>
-              <li><a href="/login">Se connecter</a></li>
-              <li><a href="/register">S'inscrire</a></li>
-            </ul>
-          </div>
-          {/* Route */}     
-          <Router>
-            <Switch>
-                <Route path="/login" component={Login(isLogin)} />
-                <Route path="/register" component={Register} />
-            </Switch>
-          </Router>   
-        </div>   
-      )
-    } 
+    var {isLogin} = this.state;
+    if(this.props.path === "/listuser") {
+      isLogin = true;
+    }
+    return  (
+      <div className="App">    
+        <div>
+          {isLogin ? 
+          <div></div> :
+          <ul>
+            <li><a href="/login">Se connecter</a></li>
+            <li><a href="/register">S'inscrire</a></li> 
+          </ul>
+          }
+        </div>
+        {<Rout/>/*<li><a href="/listuser">Liste des utilisateurs</a></li>*/}     
+        
+      </div>   
+    )
   }
 }
 
-
+/* Exportation de la classe App*/
+export default App

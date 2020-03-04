@@ -1,8 +1,7 @@
 /* Import module */
 import React, { Component } from 'react';
 
-/* Exportation de la classe ListeUser */
-export default class ListeUser extends Component {
+class ListeUser extends Component {
   state = {
     post: {},
     isLoaded:false
@@ -10,8 +9,11 @@ export default class ListeUser extends Component {
 
   // méthode appelé lorsque le composant est monté
   componentDidMount() {
+    // fetch fais appel a l'API
     fetch('https://reqres.in/api/users?page=2')
+    //permet de récuperer la promesse
     .then((reponse) => {
+      //retourne la promesse au format json
       return reponse.json()
     })
     .then((result) => {
@@ -29,7 +31,6 @@ export default class ListeUser extends Component {
   // Rendu du composant ListeUser
   render () {
     var {isLoaded, post} = this.state;
-
     // test si les données sont chargées
     if(!isLoaded) {
       return <div>Chargement...</div>
@@ -59,3 +60,5 @@ export default class ListeUser extends Component {
   }
 }
 
+/* Exportation de la classe ListeUser */
+export default ListeUser
