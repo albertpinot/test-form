@@ -1,0 +1,82 @@
+/* Globale */
+*{
+	box-sizing: border-box;	
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family:'Roboto',sans-serif;
+    color:#223a7a;
+}
+/* Formulaire */
+.container-form {
+    width: 30%;
+    margin: auto;
+}
+label{
+    float: left;
+    margin-bottom: 10px;
+}
+/* Saisie utilisateur */
+input {
+    border-radius: 30px;
+    border: 1px solid grey;
+    padding:10px 15px;
+}
+input[type=email], input[type=password] {
+    width: 100%;
+}
+input[type=email]:focus, input[type=password]:focus {
+    border:1px solid #7540fb;
+    outline:none;
+}
+/* Button */
+input[type=button] {
+    border-radius: 5px;
+    border: 2px solid #7540fb;
+    padding: 10px 20px;
+    color:#7540fb;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: white;
+}
+input[type=button]:hover {
+    background-color: #7540fb;
+    color:white;
+}
+/* margin */
+.m-t-l{
+    margin-top:20px;
+}
+.m-b-m{
+    margin-bottom:10px;
+}
+/* link */
+a{
+    text-decoration: none;
+    color:#223a7a;
+}
+a:hover{
+    color:#7540fb;
+    text-decoration: underline;
+}
+/* En-tête */
+li{
+    list-style: none;
+}
+ul{
+    display: flex;
+    justify-content: space-between;
+    width:40%;
+}
+/* Centrage texte page login et register */
+.login, .register {
+    text-align: center;
+}
+/* Point de rupture tablette */
+@media screen and (max-width: 960px) {
+    ul{
+        display: none;
+    }
+}
+

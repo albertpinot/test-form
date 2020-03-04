@@ -1,0 +1,56 @@
+/* Card liste user */
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.card {
+  width: 50%;
+  margin-bottom: 20px; 
+}
+.card > div {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  border: 2px solid #7540fb;
+  border-radius: 20px;
+  padding: 30px;
+}
+/* Info User */
+.card-info {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+/* Avatar */
+.card-avatar {
+  margin-right: 0;
+  border-radius: 180px;
+  border: 2px solid #7540fb;
+}
+/* Responsive design */
+/* Point de rupture laptop */
+@media screen and (max-width: 1280px) {
+  .card > div {
+    width: 80%;
+    padding: 10px;
+  }
+}
+/* Point de rupture tablette */
+@media screen and (max-width: 960px) {
+  .card-avatar {
+   height: 72px;
+   width: 72px;
+  }
+}
+/* Point de rupture grand téléphone */
+@media screen and (max-width: 720px) {
+  .card {
+    width: 100%; 
+  }
+}
