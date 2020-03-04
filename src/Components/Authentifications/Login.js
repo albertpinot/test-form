@@ -2,12 +2,6 @@
 import React, { Component } from 'react';
 import * as EmailValidator from 'email-validator';
 
-/* Componnents */
-import Header from '../Header';
-
-/* CSS */
-//import '../../css/Login.css';
-
 class Login extends Component {
   // Rendu du composant Login
   state = {
@@ -42,7 +36,6 @@ class Login extends Component {
   render () {
     return (
       <div> 
-        <Header/>
         <div className="login">
           <h1>Se connecter</h1>
           <form onSubmit={this.submit}>

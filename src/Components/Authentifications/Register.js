@@ -1,18 +1,11 @@
 /* Import module */
 import React, { Component } from 'react';
 
-/* CSS */
-//import '../../css/Register.css';
-
-/* Componnents */
-import Header from '../Header';
-
 class Register extends Component {
   // Rendu du composant Register
   render () {
       return (
         <div >
-        <Header/>
           <div className="register">
             <h1>Register</h1>
             <form>
